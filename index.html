@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset='UTF-8'>
+    <title>Hangman Word Game</title>
+
+    <!-- bootstrap CDN -->
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+
+
+  </head>
+
+  <body>
+
+    <!-- bootstrap container to hold everything -->
+    <div class="container">
+
+      <!-- jumbotron holds the title section -->
+      <div class='jumbotron'>
+        <div class='container'>
+                    
+          <h1>Test Your 80s Trivia Here</h1>
+          <h2>Cruise Down Memory Lane</h2>
+          <small>click any letter to begin...</small>
+        </div>
+      </div>
+
+      <!-- game counters held here. cards are being used to hold various sections -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- first card: Holds the Word to Guess (blanks and guessed word) -->
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title"><strong>Word to Guess</strong></h3>
+            </div>
+
+            <div class="card-body">
+
+              <!-- this h3 section called word-blanks is what we"ll be replacing with letters as the user guesses. pay particular attention to the id called ***word-blanks***. we"ll be referencing this in the JavaScript -->
+              <h3 id="word-blanks">_ _ _ _ _ _ _ _ _ </h3>
+
+            </div>
+
+          </div>
+
+          <!-- second card: holds the list of Wrong User Guesses -->
+          <div class="card card-default">
+            <div class="card-body">
+
+              <!-- this span section called wrong-guesses is where we will be dumping the wrong guesses. pay particular attention to the id called ****wrong-guesses***. We"ll be referencing this in the JavaScript. -->
+              <strong>Wrong Guesses: </strong> <span id="wrong-guesses"></span>
+
+            </div>
+          </div>
+
+          <!-- third card: holds the Number of Wrong Guesses. -->
+          <div class="card card-default">
+            <div class="card-body">
+
+              <!-- this span is where we"ll dump the number of guesses left. pay attention to the id called ****guesses-left**** we"ll be referencing this in the JavaScript. -->
+              <strong>Guesses Left: </strong> <span id="guesses-left">9</span>
+
+            </div>
+
+          </div>
+
+          <!-- fourth card: holds the number of Wins. -->
+          <div class="card card-default">
+
+            <div class="card-body">
+
+              <!-- this span called win-counter is where we"ll be dumping the number of wins. pay attention to the id called ****win-counter*** we"ll be referencing this in the JavaScript. -->
+              <strong>Wins: </strong> <span id="win-counter">0</span>
+
+            </div>
+
+          </div>
+
+          <!-- fifth card: holds the number of Losses. -->
+          <div class="card card-default">
+            <div class="card-body">
+
+              <!-- this span called loss-counter is where we"ll be dumping the number of losses. pay attention to the id called ****loss-counter***; we"ll be referencing this in the JavaScript. -->
+              <strong>Losses: </strong> <span id="loss-counter">0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- adds a link to the JavaScript file. loaded at the bottom so it waits for the HTML content to display first. if you put this at the top it will crash, because the HTML IDs won"t exist yet.-->
+    <script src="./assets/javascript/game.js"></script>
+
+  </body>
+
+</html>

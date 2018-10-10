@@ -1,0 +1,11 @@
+html {
+    height: 100%;
+}
+
+.jumbotron {
+    background-image: url("../images/80sNeonLights.jpg");
+    background-size: cover;}
+
+body {
+    background-color: black;
+}
