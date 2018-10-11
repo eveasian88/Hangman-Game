@@ -130,3 +130,7 @@ window.onload = function () {
     PrintResult();
   }
   }
+
+  // minor bugs that need to be fixed: 
+  // 1) good keys only feature so "delete" and "shift" aren't counted 
+  // 2) add sound if there's time
