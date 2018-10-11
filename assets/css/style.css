@@ -40,10 +40,10 @@ h1{
 	border-bottom: 3px solid #ddd;
 	padding-bottom: 20px;
 }
+
 h2,
 h3{
   font-size: 22px;
-  
 }
 
 
@@ -53,7 +53,7 @@ h3{
   height: 35px;
 }
 
-/* Full Slider on the Home Page */
+/* full slider on the home page */
 .carousel-item {
   height: 93vh;
   min-height: 300px;
@@ -65,7 +65,7 @@ h3{
 }
 
 
-/*Game page */
+/*game page */
 
 #main-container {
 	padding-top: 100px;
@@ -85,26 +85,11 @@ h3{
   filter: alpha(opacity=60);
 }
 
-/* Show all Grid in red - For testing purpose */
-/*
-.row div {
-   
-  border: 1px solid lightgrey;
-  background-color: #ff66cc;
- 
-}
-*/
 
-/*
-.mh1 div {
-  height: 3vh; /* 30% of viewport height*/
-/*
-}
-*/
 
-/* Figure */
+/* figure */
 
-  /* Figure Caption Upper Case */
+  /* figure caption upper case */
   figure {
     text-transform: uppercase;
 
@@ -131,7 +116,7 @@ footer {
  
 }
 
-/* Responsive Font */
+/* responsive font */
 /* xs < 768 */ 
 @media screen and (max-width: 767px) { 
   body { font-size: 0.7em; }
