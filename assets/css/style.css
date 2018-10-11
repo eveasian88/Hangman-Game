@@ -1,11 +1,160 @@
-html {
-    height: 100%;
+body{
+	color: #777777;
+  background-image: url("../images/88mph.jpg");
+  background-size: 120% 130%;
+  font-size: 18px;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+ 
 }
 
-.jumbotron {
-    background-image: url("../images/80sNeonLights.jpg");
-    background-size: cover;}
+* {
+	box-sizing: border-box;
+}
 
-body {
-    background-color: black;
+.container {
+	width: 90%;
+	max-width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+p{
+    margin-bottom: 20px;
+}
+
+p:last-child {
+	margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+	font-family: 'Georgia', Times, 'Times New Roman', serif;
+	font-weight: 700;
+	
+}
+
+h1{
+	font-size: 30px;
+	line-height: 49px;
+	border-bottom: 3px solid #ddd;
+	padding-bottom: 20px;
+}
+h2,
+h3{
+  font-size: 22px;
+  
+}
+
+
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+/* Full Slider on the Home Page */
+/* .carousel-item {
+  height: 93vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+
+/*Game page */
+
+#main-container {
+	padding-top: 100px;
+  height: 93vh;
+  padding-bottom: 100px;
+  min-height: 300px;
+  
+}
+
+.main-section {
+
+  background: #fff;
+  color: black;
+  font-weight: 300;
+  padding: 30px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+/* Show all Grid in red - For testing purpose */
+/*
+.row div {
+   
+  border: 1px solid lightgrey;
+  background-color: #ff66cc;
+ 
+}
+*/
+
+/*
+.mh1 div {
+  height: 3vh; /* 30% of viewport height*/
+/*
+}
+*/
+
+/* Figure */
+
+  /* Figure Caption Upper Case */
+  figure {
+    text-transform: uppercase;
+
+    }
+  /* fix the image size */ 
+  figure img {
+    max-width: 100%;
+    max-height: 200px;
+ 
+    }
+
+
+/*footer*/
+
+footer {
+	background: #666666;
+	color: #ffffff;
+  padding: 30px 0;
+  z-index: 99;
+	clear: both;
+	border-top: 8px solid #666666;
+	font-size: 12px;
+  text-align: center;
+ 
+}
+
+/* Responsive Font */
+/* xs < 768 */ 
+@media screen and (max-width: 767px) { 
+  body { font-size: 0.7em; }
+  
+  #main-container {
+    padding-top: 100px; 
+  }
+
+
+} 
+
+
+/* sm */ 
+@media screen and (min-width: 768px) { 
+  body { font-size: 1em; } 
+} 
+
+/* md */ 
+@media screen and (min-width: 992px) { 
+  body { font-size: 1.2em; } 
+} 
+
+/* lg */ 
+@media screen and (min-width: 1200px) { 
+  body { font-size: 1.3em; } 
 }

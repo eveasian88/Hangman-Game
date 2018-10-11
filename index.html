@@ -1,106 +1,168 @@
 <!DOCTYPE html>
-
-<html lang="en-us">
+<html lang="en">
 
   <head>
 
-    <meta charset='UTF-8'>
-    <title>Hangman Word Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- bootstrap CDN -->
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Word Guess Game</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/style.css" rel="stylesheet">
 
   </head>
 
   <body>
+        
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                 
+            
+      <div class="container-fluid">
+            <img src="./assets/images/88mph.jpg" class="logo">  
+        <a class="navbar-brand" href="index.html">80s Trivia Word Game</a>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
 
-    <!-- bootstrap container to hold everything -->
-    <div class="container">
-
-      <!-- jumbotron holds the title section -->
-      <div class='jumbotron'>
-        <div class='container'>
-                    
-          <h1>Test Your 80s Trivia Here</h1>
-          <h2>Cruise Down Memory Lane</h2>
-          <small>click any letter to begin...</small>
+            <li class="nav-item">
+              <a id="gameStart" class="nav-link" href="game.html">Game</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <!-- game counters held here. cards are being used to hold various sections -->
-      <div class="row">
-        <div class="col-lg-12">
-
-          <!-- first card: Holds the Word to Guess (blanks and guessed word) -->
-          <div class="card card-default">
-            <div class="card-header">
-              <h3 class="card-title"><strong>Word to Guess</strong></h3>
-            </div>
-
-            <div class="card-body">
-
-              <!-- this h3 section called word-blanks is what we"ll be replacing with letters as the user guesses. pay particular attention to the id called ***word-blanks***. we"ll be referencing this in the JavaScript -->
-              <h3 id="word-blanks">_ _ _ _ _ _ _ _ _ </h3>
-
-            </div>
-
-          </div>
-
-          <!-- second card: holds the list of Wrong User Guesses -->
-          <div class="card card-default">
-            <div class="card-body">
-
-              <!-- this span section called wrong-guesses is where we will be dumping the wrong guesses. pay particular attention to the id called ****wrong-guesses***. We"ll be referencing this in the JavaScript. -->
-              <strong>Wrong Guesses: </strong> <span id="wrong-guesses"></span>
-
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('assets/images/dragonite.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>PACMAN</h3>
+              <p>popular arcade game inside every mcdonald’s in america</p>
+               <p>click game to play</p>
             </div>
           </div>
-
-          <!-- third card: holds the Number of Wrong Guesses. -->
-          <div class="card card-default">
-            <div class="card-body">
-
-              <!-- this span is where we"ll dump the number of guesses left. pay attention to the id called ****guesses-left**** we"ll be referencing this in the JavaScript. -->
-              <strong>Guesses Left: </strong> <span id="guesses-left">9</span>
-
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('assets/images/eevee.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>GREMLINS</h3>
+              <p>this movie introduced us to a mogwai named gizmo</p>
+              <p>click game to play</p>
             </div>
-
           </div>
-
-          <!-- fourth card: holds the number of Wins. -->
-          <div class="card card-default">
-
-            <div class="card-body">
-
-              <!-- this span called win-counter is where we"ll be dumping the number of wins. pay attention to the id called ****win-counter*** we"ll be referencing this in the JavaScript. -->
-              <strong>Wins: </strong> <span id="win-counter">0</span>
-
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('assets/images/pikachu.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>MTV</h3>
+              <p>completely revolutionalized the music industry</p>
+              <p>click game to play</p>
             </div>
-
           </div>
-
-          <!-- fifth card: holds the number of Losses. -->
-          <div class="card card-default">
-            <div class="card-body">
-
-              <!-- this span called loss-counter is where we"ll be dumping the number of losses. pay attention to the id called ****loss-counter***; we"ll be referencing this in the JavaScript. -->
-              <strong>Losses: </strong> <span id="loss-counter">0</span>
-
+           <!-- Slide Four - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="background-image: url('assets/images/meowth.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>WHAM!</h3>
+              <p>wake me up before you go-go</p>
+              <p>click game to play</p>
             </div>
-
           </div>
-
+           <!-- Slide Five - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="background-image: url('assets/images/snorlax.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>GAMEBOY</h3>
+              <p>nintendo device that popularized the gaming industry</p>
+              <p>click game to play</p>
+            </div>
+          </div>
+           <!-- Slide Six - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="background-image: url('assets/images/vulpix.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>MICROWAVES</h3>
+              <p>The six pokemon character.</p>
+              <p>click game to play</p>
+            </div>
+          </div>
+            <!-- Slide Seven - Set the background image for this slide in the line below -->
+           <div class="carousel-item" style="background-image: url('assets/images/charmander.gif')">
+            <div class="carousel-caption d-inline d-md-block">
+              <h3>ECTO-1</h3>
+              <p>license plate of the ghostbuster’s car</p>
+              <p>click game to play</p>
+            </div>
+          </div>
+            <!-- Slide eight - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('assets/images/squirtle.gif')">
+                <div class="carousel-caption d-inline d-md-block">
+                  <h3>VANILLI</h3>
+                  <p>if you grew up in the 80s, you know what goes after milli</p>
+                  <p>click game to play</p>
+                </div>
+              </div>
+              
+             <!-- Slide nine - Set the background image for this slide in the line below -->
+             <div class="carousel-item" style="background-image: url('assets/images/jigglypuff.gif')">
+              <div class="carousel-caption d-inline d-md-block">
+                <h3>APPLE</h3>
+                <p>this fruit a day created the desktop computer</p>
+                <p>click game to play</p>
+              </div>
+            </div>
         </div>
-
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
+    </header>
 
-    </div>
+ 
 
-    <!-- adds a link to the JavaScript file. loaded at the bottom so it waits for the HTML content to display first. if you put this at the top it will crash, because the HTML IDs won"t exist yet.-->
-    <script src="./assets/javascript/game.js"></script>
+    <!-- footer -->
+    <footer class="py-3 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; 2018 Susye Weng-Reeder</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- bootstrap core javascript -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
   </body>
 

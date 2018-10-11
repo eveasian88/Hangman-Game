@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Word Guess Game</title>
+
+    <!-- bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+    <!-- custom styles for this template -->
+  
+    <link href="./assets/css/style.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+        
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                 
+            
+      <div class="container-fluid">
+            <img src="./assets/images/88mph.jpg" class="logo">  
+        <a class="navbar-brand" href="./index.html">80s Trivia Word Guess Game</a>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a id="gameStart" class="nav-link" href="./game.html">Game
+              <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+  <!-- main body -->
+
+  <div  id="main-container" class="container">
+    <section class="main-section">
+      <!-- start grid  -->
+        <!--     grid netting    -->       
+       <div class="row">
+  
+          <div class="row col-12">
+              <p id="currentWord">Cruise Down Memory Lane </p>
+          </div>
+          <div class="row col-12">
+              <p id="guessed">Letters Already Guessed:</p>
+          </div>
+          <div class= "row col-8">
+                    <div class="row col-12">
+                            <p id="playerChoice">Key Entered: </p> 
+                    </div>
+                    
+
+                    <div class="row col-12">
+                            <p id="guessesRemaining">Number Of Guesses Remaining:</p>       
+                    </div>
+                    
+                                    
+                    <div class="row col-12"> 
+                            <p id="winCounter">Win: </p>
+                    </div>
+                    
+           
+                    <div class="row col-12">     
+                            <p id="lossCounter">Loss: </p>
+                    </div>
+                      
+            
+                    <div class="row col-12">   
+                              <p id="word">Cruise Down Memory Lane</p> 
+                    </div>
+                    <div class="row col-12">   
+                      <input type="text"  name="key" >
+                    </div>
+                     
+          </div>        
+          <div class= "row col-4 justify-content-center">         
+          
+          <!-- bootstrap figure  image fluid.  displays related images and text with the figure component in bootstrap-->
+          
+            <figure class= "figure">
+                      <img id= "imageID" class="img-fluid rounded" src="./assets/images/80sNeonLights.jpg">
+                      <figcaption  id ="imageName"class="figure-caption text-right"></figcaption>
+                   
+                  </figure>
+          </div>
+       </div> <!-- close grid netting-->
+         
+    </section>      
+  </div>
+        
+
+    <!-- footer -->
+    <footer class="py-3 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; 2018 Susye Weng-Reeder</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- bootstrap core javascript -->
+ 
+
+
+    <!-- bootstrap core javascript -->
+  <script src="./assets/javascript/game.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
