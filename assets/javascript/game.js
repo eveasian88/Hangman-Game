@@ -3,7 +3,7 @@ window.onload = function () {
 
   //made the variables first to use in the functions
   //array of words.
-  var Words = ['pacman', 'gremlins', 'mtv', 'wham!', 'gameboy', 'microwaves', 'ECTO-1', 'vanilli', 'apple'
+  var Words = ['pacman', 'gremlins', 'mtv', 'wham!', 'gameboy', 'microwaves', 'ghostbusters', 'vanilli', 'apple'
   ];
   var guesses = []; //stored correct guesses and blanks will be in this array
   var blanks = 0; //holds blanks spaces for the word chosen
@@ -97,7 +97,7 @@ window.onload = function () {
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the win counter in the HTML
-      document.getElementById("winCounter").innerHTML = "you have won " + winCounter + " game(s)";
+      document.getElementById("winCounter").innerHTML = "You Have Won " + winCounter + " game(s)";
      // restart the game automatically
       startGame(); 
     }
@@ -105,12 +105,12 @@ window.onload = function () {
     // if we've run out of guesses
     else if (numGuesses == 0) {
       lossCounter++; // add to the loss counter 
-      document.getElementById("word").innerHTML = "the last word was " + currentWord;
+      document.getElementById("word").innerHTML = "The Last word was " + currentWord;
       document.getElementById("imageID").src = "assets/images/" + currentWord + ".gif" ;
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the loss counter in the HTML
-      document.getElementById("lossCounter").innerHTML = "you have lost " + lossCounter + " game(s)";
+      document.getElementById("lossCounter").innerHTML = "You Have Lost " + lossCounter + " game(s)";
   
       // restart the game automatically
       startGame(); 

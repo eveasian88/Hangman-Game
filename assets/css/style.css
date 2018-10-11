@@ -54,7 +54,7 @@ h3{
 }
 
 /* Full Slider on the Home Page */
-/* .carousel-item {
+.carousel-item {
   height: 93vh;
   min-height: 300px;
   background: no-repeat center center scroll;
@@ -62,7 +62,7 @@ h3{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-} */
+}
 
 
 /*Game page */
