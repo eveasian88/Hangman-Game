@@ -5,8 +5,8 @@ window.onload = function () {
   //array of words.
   var Words = ['pacman', 'gremlins', 'mtv', 'wham', 'gameboy', 'microwaves', 'ghostbusters', 'milli_vanilli', 'apple'
   ];
-  var guesses = []; //stored correct guesses and blanks will be in this array
-  var blanks = 0; //holds blanks spaces for the word chosen
+  var guesses = []; // stored correct guesses and blanks will be in this array
+  var blanks = 0; // holds blanks spaces for the word chosen
   var currentWord = "";
   var currentLetters = [];
   // counters
@@ -15,28 +15,28 @@ window.onload = function () {
   var numGuesses = 12;
   
   
-  //array for users guessed letters
+  // array for users guessed letters
   var guessedLetter = [];
-  //array for users correct guesses
+  // array for users correct guesses
   var correctLetter = [];
-  //guessed letters that are incorrect
+  // guessed letters that are incorrect
   var incorrectGuess = [];
   
   // user input key
   var  userGuess = document.getElementById("playerChoice"); 
   
-  //define a function called startGame which will print the blanks and set the total number of count
+  // define a function called startGame which will print the blanks and set the total number of count
   function startGame() {
     numGuesses = 12;
     guesses = [];
     guessedLetter = [];
     incorrectGuess = [];
-    //selects a words at random
+    // selects a words at random
     currentWord = Words[Math.floor(Math.random() * Words.length)];
-    //splits the current word into letters, so that you can match the users guesses to the letters of the word
+    // splits the current word into letters, so that you can match the users guesses to the letters of the word
     currentLetters = currentWord.split("");
   
-    //need to know how many blanks for a word
+    // need to know how many blanks for a word
     blanks = currentLetters.length;
     for (var i = 0; i < blanks; i++) {
       guesses.push("_")
@@ -49,7 +49,7 @@ window.onload = function () {
   }
   
   
-  //define a checkLetters function which checks if users letter is in the word
+  // define a checkLetters function which checks if users letter is in the word
   function checkLetters(letter) {
     //using boolean to check if the letter is in the word
     var letterInWord = false;
