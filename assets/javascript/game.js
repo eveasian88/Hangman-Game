@@ -54,7 +54,7 @@ window.onload = function () {
     //using boolean to check if the letter is in the word
     var letterInWord = false;
   
-    //loop that goes through the length of the word
+    // loop that goes through the length of the word
     for (var i = 0; i < blanks; i++) {
       if (currentWord[i] == letter) {
         letterInWord = true;
@@ -76,7 +76,7 @@ window.onload = function () {
     }
   }
   
-  //define a PrintResult function which will print the result on the screen upon finishing 
+  // define a PrintResult function which will print the result on the screen upon finishing 
   function PrintResult() {
   
     console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses + " | Key Entered: " + userGuess.textContent + " | Pokemon Name: " + guesses.join(" ") + " | Already Guessed: " + incorrectGuess.join(" "));
@@ -132,5 +132,5 @@ window.onload = function () {
   }
 
   // minor bugs that need to be fixed: 
-  // 1) good keys only feature so "delete" and "shift" aren't counted 
-  // 2) add sound if there's time
+  // 1) good keys only feature so "delete", "shift", "return" aren't counted as bad guesses
+  // 2) add sound clips if there's time
