@@ -3,7 +3,7 @@ window.onload = function () {
 
   //made the variables first to use in the functions
   //array of words.
-  var Words = ['pacman', 'gremlins', 'mtv', 'wham!', 'gameboy', 'microwaves', 'ghostbusters', 'milli vanilli', 'apple'
+  var Words = ['pacman', 'gremlins', 'mtv', 'wham', 'gameboy', 'microwaves', 'ghostbusters', 'milli_vanilli', 'apple'
   ];
   var guesses = []; //stored correct guesses and blanks will be in this array
   var blanks = 0; //holds blanks spaces for the word chosen
