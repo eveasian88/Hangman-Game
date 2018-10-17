@@ -1,8 +1,8 @@
-//when window on load, it will triger the program below
+// when window loads, it will triger the program below
 window.onload = function () {
 
-  //made the variables first to use in the functions
-  //array of words.
+  // made the variables first to use in the functions
+  // array of words.
   var Words = ['pacman', 'gremlins', 'mtv', 'wham', 'gameboy', 'microwaves', 'ghostbusters', 'milli_vanilli', 'apple'
   ];
   var guesses = []; // stored correct guesses and blanks will be in this array
@@ -23,7 +23,7 @@ window.onload = function () {
   var incorrectGuess = [];
   
   // user input key
-  var  userGuess = document.getElementById("playerChoice"); 
+  var userGuess = document.getElementById("playerChoice"); 
   
   // define a function called startGame which will print the blanks and set the total number of count
   function startGame() {
@@ -51,7 +51,7 @@ window.onload = function () {
   
   // define a checkLetters function which checks if users letter is in the word
   function checkLetters(letter) {
-    //using boolean to check if the letter is in the word
+    // using boolean to check if the letter is in the word
     var letterInWord = false;
   
     // loop that goes through the length of the word
@@ -79,9 +79,9 @@ window.onload = function () {
   // define a PrintResult function which will print the result on the screen upon finishing 
   function PrintResult() {
   
-    console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses + " | Key Entered: " + userGuess.textContent + " | Pokemon Name: " + guesses.join(" ") + " | Already Guessed: " + incorrectGuess.join(" "));
+    console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses + " | Key Entered: " + userGuess.textContent + " | Back to the 80s: " + guesses.join(" ") + " | Already Guessed: " + incorrectGuess.join(" "));
   
-    
+  
     // update the HTML to reflect the new number of guesses. also update the correct guesses
     document.getElementById("currentWord").innerHTML = "Back to the 80s: " + guesses.join(" ");
     document.getElementById("guessed").innerHTML = "Letters Already Guessed: " + incorrectGuess.join(" ");
@@ -92,25 +92,25 @@ window.onload = function () {
     // if we get all the letters to match the solution... 
     if (currentLetters.toString() == guesses.toString()) {
       winCounter++; // add to the win counter 
-      document.getElementById("word").innerHTML = "The last word was " + currentWord;
+      document.getElementById("word").innerHTML = "The last word was: " + currentWord;
       document.getElementById("imageID").src = "assets/images/" + currentWord + ".gif" ;
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the win counter in the HTML
-      document.getElementById("winCounter").innerHTML = "You Have Won " + winCounter + " game(s)";
+      document.getElementById("winCounter").innerHTML = "You Have Won  " + winCounter + "  game(s)";
      // restart the game automatically
       startGame(); 
     }
   
-    // if we've run out of guesses
+    // if player runs out of guesses
     else if (numGuesses == 0) {
       lossCounter++; // add to the loss counter 
-      document.getElementById("word").innerHTML = "The Last word was " + currentWord;
+      document.getElementById("word").innerHTML = "The Last word was: " + currentWord;
       document.getElementById("imageID").src = "assets/images/" + currentWord + ".gif" ;
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the loss counter in the HTML
-      document.getElementById("lossCounter").innerHTML = "You Have Lost " + lossCounter + " game(s)";
+      document.getElementById("lossCounter").innerHTML = "You Have Lost  " + lossCounter + " game(s)";
   
       // restart the game automatically
       startGame(); 
@@ -133,4 +133,5 @@ window.onload = function () {
 
   // minor bugs that need to be fixed: 
   // 1) good keys only feature so "delete", "shift", "return" aren't counted as bad guesses
-  // 2) add sound clips if there's time
+  // 2) removed the exclamation from wham! in array to not run into issues
+  // 3) add sound clips to match the gif/images if there's time
