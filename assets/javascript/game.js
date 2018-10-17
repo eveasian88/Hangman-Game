@@ -135,3 +135,10 @@ window.onload = function () {
   // 1) good keys only feature so "delete", "shift", "return" aren't counted as bad guesses
   // 2) removed the exclamation from wham! in array to not run into issues
   // 3) add sound clips to match the gif/images if there's time
+
+  // if (currentLetters.includes(userGuess)) { 
+  //   return;
+  // }
+  // currentLetters.push(userGuess);
+  
+  // need to add above somewhere to solve the good key issue
