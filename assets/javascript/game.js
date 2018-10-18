@@ -97,7 +97,7 @@ window.onload = function () {
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the win counter in the HTML
-      document.getElementById("winCounter").innerHTML = "You Have Won  " + winCounter + "  game(s)";
+      document.getElementById("winCounter").innerHTML = "You Have Won_  " + winCounter + " _game(s)";
      // restart the game automatically
       startGame(); 
     }
@@ -110,7 +110,7 @@ window.onload = function () {
       document.getElementById("imageName").innerHTML = currentWord;
   
       // update the loss counter in the HTML
-      document.getElementById("lossCounter").innerHTML = "You Have Lost  " + lossCounter + " game(s)";
+      document.getElementById("lossCounter").innerHTML = "You Have Lost_  " + lossCounter + " _game(s)";
   
       // restart the game automatically
       startGame(); 
@@ -140,5 +140,5 @@ window.onload = function () {
   //   return;
   // }
   // currentLetters.push(userGuess);
-  
+
   // need to add above somewhere to solve the good key issue
