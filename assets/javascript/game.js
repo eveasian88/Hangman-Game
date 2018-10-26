@@ -70,6 +70,9 @@ window.onload = function () {
       console.log(guesses);
   
     } else {
+      if (incorrectGuess.includes(letter)) {
+        return;
+      }
       incorrectGuess.push(letter);
       numGuesses--;
       console.log("that was incorrect " + numGuesses + " are remaining");
@@ -134,9 +137,4 @@ window.onload = function () {
   // minor bugs that need to be fixed: 
   // good keys only feature so "delete", "shift", "return" aren't counted as bad guesses
   
-  // if (currentLetters.includes(userGuess)) { 
-  //   return;
-  // }
-  // currentLetters.push(userGuess);
-
-  // need to add above somewhere to solve the good key issue
+  
