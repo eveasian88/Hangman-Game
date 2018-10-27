@@ -134,7 +134,5 @@ window.onload = function () {
   }
   }
 
-  // minor bugs that need to be fixed: 
-  // good keys only feature so "delete", "shift", "return" aren't counted as bad guesses
   
   
