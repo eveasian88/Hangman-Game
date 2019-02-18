@@ -3,5 +3,3 @@ Take a trip down memory lane and test your knowledge of the 80's here with this 
 
 ## Technologies Utilized
 HTML5 • Bootstrap4 • CSS3 • Javascript
-
-https://eveasian88.github.io/Hangman-Game/
